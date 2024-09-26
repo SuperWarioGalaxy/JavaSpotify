@@ -1,0 +1,33 @@
+.item{
+    padding-bottom: 10px;
+}
+
+.cover{
+    background-color: gray;
+    width: 200px;
+    height: 200px;
+   
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cv1{
+    background-image:url("/assets/img/freeman.jpg");
+    background-size: cover;
+}
+.cv2{
+    background-image:url("/assets/img/rain.jpg");
+    background-size: cover;
+}
+.cv3{
+    background-image:url("/assets/img/patrol.jpg");
+    background-size: cover;
+}
+
+body{
+    background-color: black;
+}

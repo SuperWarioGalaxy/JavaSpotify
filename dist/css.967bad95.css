@@ -1,0 +1,35 @@
+.item{
+    padding-bottom: 10px;
+}
+
+.cover{
+    background-color: gray;
+    width: 200px;
+    height: 200px;
+   
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cv1{
+    background-image:url("/freeman.2d4c9625.jpg");
+    background-size: cover;
+}
+.cv2{
+    background-image:url("/rain.a9927d92.jpg");
+    background-size: cover;
+}
+.cv3{
+    background-image:url("/patrol.3fcc6f23.jpg");
+    background-size: cover;
+}
+
+body{
+    background-color: black;
+}
+
+/*# sourceMappingURL=/css.967bad95.css.map */
