@@ -147,14 +147,20 @@ var Song = exports.default = /*#__PURE__*/_createClass(function Song(k_song, v_s
   _classCallCheck(this, Song);
   this.element = document.querySelector(k_song);
   this.audio = new Audio(v_song);
-  //this.album = document.querySelector(c_song);
+  this.album = document.querySelector(c_song);
 });
 function play_song(song) {
   song.element.onclick = function () {
     if (song.audio.paused || song.audio.ended) {
       song.audio.play();
+      // song.album.classList.remove("close")
+      // song.album.classList.add("open")
+      song.album.classList.add("bucl");
     } else {
       song.audio.pause();
+      // song.album.classList.remove("open")
+      // song.album.classList.add("close")
+      song.album.classList.remove("bucl");
     }
   };
 }
@@ -182,14 +188,15 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 var Player = exports.default = /*#__PURE__*/_createClass(function Player(map) {
   _classCallCheck(this, Player);
-  Object.entries(map);
+  //Object.entries(map);
   var aux = 1;
   for (var _i = 0, _Object$entries = Object.entries(map); _i < _Object$entries.length; _i++) {
     var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
       key = _Object$entries$_i[0],
       value = _Object$entries$_i[1];
     //crea la instancia para Song
-    var song = new _Song.default(key, value);
+    var s_cover = ".cv".concat(aux);
+    var song = new _Song.default(key, value, s_cover);
     (0, _Song.play_song)(song);
     //Invoca la función para reproducir la canción
     aux++;
@@ -244,7 +251,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49838" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49827" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
